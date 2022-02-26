@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Canvas</title>
+<script type="text/javascript">
+window.onload = function(){
+    var cvs = document.getElementById("cvs");
+    var ctx = cvs.getContext("2d"); // canvas context object
+    // Fill 填滿
+    ctx.fillStyle = "red";
+    ctx.globalAlpha = 0.5;
+    ctx.fillRect(50, 50, 100, 100)
+    
+    // Stroke 描邊
+    ctx.strokeStyle = "green";
+    ctx.globalAlpha = 1;
+    ctx.strokeRect(200, 100, 50, 50)
+    
+    // Path 路徑
+    ctx.strokeStyle = "blue";
+    ctx.beginPath();
+    ctx.moveTo(300, 100); // 移動當前所在的位置
+    ctx.lineTo(600, 300);
+    ctx.closePath();
+    ctx.stroke();
+    
+    
+    ctx.beginPath();
+    ctx.fillStyle = "yellow";
+    ctx.moveTo(400, 100); // 移動當前所在的位置
+    ctx.lineTo(600, 100);
+    ctx.lineTo(600, 200);
+    ctx.lineTo(400, 200);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = "black";
+    ctx.stroke();
+
+}
+
+
+</script>
+</head>
+<body>
+<canvas id="cvs" width="800" height="600" style="border: 1px solid #888888;"></canvas>
+</body>
+</html>

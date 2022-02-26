@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showTime() {
+    var d = new Date();
+    document.querySelector("p").innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+}
+</script>
+<style>
+h1 { color: red; }
+p { background-color: yellow; font-size: 50px;}
+</style>
+</head>
+<body>
+<!-- 標題 -->
+<h1 onclick="showTime()">This is a Heading</h1>
+<!-- 段落 -->
+<p>This is a paragraph.</p>
+</body>
+</html>

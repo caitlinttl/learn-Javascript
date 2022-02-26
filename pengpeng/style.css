@@ -1,0 +1,55 @@
+body{margin: 0px;}
+/* nav 樣式設定 */
+nav{
+    display: flex;
+}
+nav>.logo{
+    flex: none;
+    /* 沒有彈性, 固定尺寸 */
+    width: 100px;
+    background-color: rgb(213, 226, 177);
+}
+nav>.menu{
+    flex: auto;
+    /* 盡量把容器空間張滿 */
+    background-color: antiquewhite;
+}
+nav>.user{
+    flex: none;
+    width: 100px;
+    background-color: aquamarine;
+}
+/* main 樣式設定 */
+/* 容器 */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    /* 才會換行 */
+    justify-content: center;
+    /* 水平置中 */
+    /* justify-content: flex-end; */
+    /* 靠右 */
+    align-items: stretch;
+    /* 延展 */
+    align-items: flex-start;
+    /* 垂直對齊 */
+    background-color: #b8b8b8;
+}
+/* 項目 */
+main>.item{
+    flex: none;
+    width: 270px;
+    margin: 10px;
+    /* 1200px 以上的規劃 */
+    background-color: rgb(240, 175, 164);
+}
+@media (max-width:1200px){
+    main>.item{
+        width: 45%;
+    }
+}
+@media (max-width:500px){
+    main>.item{
+        width: 90%;
+    }
+}
